@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+#{set title:'Cadastro de Pacientes' /}
+
+<form action="@{Pacientes.salvar}">
+
+    <input type="hidden" name="p.id" value="${p?.id}"></input>
+        <div class="mb-3">
+		    <label>Nome</label>
+			<input type="text" name="p.nome" value="${p?.nome}">
+		</div>
+
+		<div class="mb-3">
+			<label>Email</label>
+			<input type="text" name="p.email" value="${p?.email}">
+		</div>
+
+		<div class="mb-3">
+			<label>Senha</label>
+			<input type="password" name="p.senha" value="${p?.senha}">
+		</div>
+
+		<div class="mb-3">
+			<label>Data de atendimento</label>
+			<input type="date" name="p.date" value="${p?.date}">
+		</div>
+
+		<br />
+		
+		<input class="btn btn-primary" type="submit">
+
+</form>
